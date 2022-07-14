@@ -1,0 +1,298 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    margin:0px;
+    padding:0px;
+}
+body{
+    font-family: Calibri;
+    margin:0px;
+    padding:0px;
+    background-image:url("../img/pexels-photo-278918.jpeg");
+    background-size: cover;
+    height: 100vh;
+	background-position: center;
+
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.726);
+    width: 80%;
+    margin: 40px auto;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.player-turn{
+    display: none;
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.scorefour{
+    display: none;
+    width: 80%;
+    margin:0 auto;
+    padding-bottom: 20px;
+    
+}
+
+.scorefour table{
+    
+    margin:0px auto;
+    width: 100%;
+    padding: 20px;
+    background-color: darkblue;
+    
+}
+
+
+.scorefour table tr td{
+    padding: 10px;
+}
+
+
+.scorefour table tr td button{
+    background-color: rgb(199, 253, 253);
+    border:none;
+    border-radius: 50%;
+    width: 100%;
+    height: 120px;
+}
+
+.init-players{
+    display: none;
+    margin: 0px auto;
+    width: 80%;
+    padding: 30px 0;
+}
+.init-players form .player{
+    width: 40%;
+}
+.init-players form .set-players{
+    width: 10%;
+    display: flex;
+    align-items: flex-end;
+}
+.init-players form .set-players input{
+    background-color: darkblue;
+    
+    width: 100%;
+    color: white;
+    border-radius:5px;
+    border:1px solid white;
+    cursor:pointer;
+}
+.init-players form .player input{
+    width: 100%;
+    border-radius:5px;
+    border:1px solid darkblue;
+}
+.init-players form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.info-box{
+    padding-bottom: 20px;
+}
+.info-box table{
+   
+    background-color:  rgba(255, 255, 255, 0.884);
+    
+    border:1px solid;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-image:  linear-gradient(to right, blue , yellow , green ,red , red , teal ) 1;
+    width: 80%;
+}
+.info-box table tr td{
+    text-align: center;
+    padding: 3px 0;
+}
+.red{
+    color:red;
+}
+.cyan{
+    color:lightcyan;
+}
+.yellow{
+    color:yellow;
+}
+.blue{
+    color: blue;
+}
+.green{
+    color:green;
+}
+.orange{
+    color:orange;
+}
+header {
+    padding-top:30px;
+    text-align: center;
+}
+header label{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.type-of-game{
+    padding: 30px 0 ;
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-game-round{
+    
+    padding: 0 0 20px 0;
+    width: 80%;
+    margin: 0px auto;
+   /* display: flex;*/
+    justify-content: space-between;
+    display: none;
+}
+
+.type-of-game div,.new-game-round div{
+    width: 45%;
+}
+.type-of-game div button,.new-game-round div button{
+    background-color: white;
+    padding : 10px;
+    cursor:pointer;
+    border-image:   linear-gradient(to right, blue , yellow , green ,red , red , teal ) 1;
+    width: 100%;
+}
+.type-of-game div button:hover,.new-game-round div button:hover,.type-of-game div button label:hover,.new-game-round div button label:hover{
+    background-color: lightcyan;
+    cursor:pointer;
+}
+.type-of-game div button label,.new-game-round div button label{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.players-score{
+    padding-top: 20px;
+    width: 80%;
+    /*display: flex;*/
+    display: none;
+    justify-content: space-between;
+    margin:0 auto;
+}
+.players-score div {
+    background-color: rgba(255, 255, 255, 0.884);
+    width: 45%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding :15px;
+    text-align: center;
+    border:1px solid blue;
+    
+}
+.players-score div label span{
+    font-size: 25px;
+}
+.crown{
+    width: 10%;
+}
+
+.home-board-img{
+    width: 80%;
+    margin:0 auto;
+}
+.home-board-img img{
+    width: 100%;
+    padding-bottom: 30px;
+}
+.error-text{
+    width: 80%;
+    margin :0 auto;
+    font-size: 15px;
+    color:red;
+    display: none;
+    margin-bottom: 20px;
+}
+#piechart{
+    display: none;
+    margin:0 auto;
+    width: 80%; 
+    height: 300px;
+    padding-bottom: 30px;
+}
+
+
+.blinking-yellow{
+    animation: blinkingyellow 1.2s infinite;
+}
+.blinking{
+    animation: none;
+}
+
+@keyframes blinkingyellow{
+    0%{     background-color: rgb(225, 250, 0);    }
+    49%{    background-color: rgb(255, 182, 72); }
+    60%{    background-color: rgb(255, 178, 35); }
+    99%{    background-color: rgb(243, 255, 173);  }
+    100%{   background-color: rgb(254, 255, 208);    }
+}
+
+.blinking-red{
+    animation: blinkingred 1.2s infinite;
+}
+
+@keyframes blinkingred{
+    0%{     background-color: rgb(250, 0, 0);    }
+    49%{    background-color: rgb(255, 81, 81); }
+    60%{    background-color: rgb(255, 138, 138); }
+    99%{    background-color: rgb(255, 164, 164);  }
+    100%{   background-color: rgb(255, 217, 217);    }
+}
+
+@media only screen and (max-width: 1500px){
+    .scorefour table tr td button{
+        height: 100px;
+        
+    }
+    .scorefour table{
+        height: 80%;
+        
+    }
+}
+@media only screen and (max-width: 1300px){
+    .scorefour table tr td button{
+        height: 80px;
+        
+    }
+    .scorefour table{
+        height: 80%;
+        
+    }
+}
+@media only screen and (max-width: 1100px){
+    .scorefour table tr td button{
+        height: 60px;
+        
+    }
+    .scorefour table{
+        height: 70%;
+        
+    }
+}
+@media only screen and (max-width: 850px){
+    .scorefour table tr td button{
+        height: 50px;
+        
+    }
+    .scorefour table{
+        height: 70%;
+        
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/scorefour.css">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <label>
+            
+                <span class="red">S</span><span class="green">c</span><span class="cyan">o</span><span class="orange">r</span><span class="blue">e</span> <span class="yellow">4</span>
+            
+    </label>
+    </header>
+    <div class="type-of-game"> 
+        <div>
+            <button onclick="typeOfGame('normal')"><label>Player vs Player</label> </button>
+        </div>
+        <div>
+            <button onclick="typeOfGame('computer')"> <label>Player vs Computer</label>  </button>
+        </div>
+        
+    </div>
+    <div class="init-players">
+        <form class="players" id="players">
+            <div class="player">
+                <label>Player 1</label>
+                <input type="text" id="player1" placeholder="Username">
+            </div>
+            <div class="player player2-input">
+                <label>Player 2</label>
+                <input type="text" id="player2" placeholder="Username">
+            </div>
+            <div class="set-players">
+                <input type="submit" id="submit-players"value="Set"onclick="setPlayerName()">
+            </div>
+            
+        </form>
+    </div>
+    <div class="players-score"> 
+        <div >
+            <label><span class="p1">Player1</span><image class ="crown"src="img/crowns.png"></image> <span>=</span> <span class="p1-points">0</span></label>
+        </div>
+        <div>
+            <label><span class="p2"></span><image class ="crown"src="img/crowns.png"></image> <span>=</span> <span class="p2-points"></span></label>
+        </div>
+    </div>
+    <div class="home-board-img">
+        <img src="img/1.jpg">
+    </div>
+    <div class="player-turn">
+        <label class="player-turn-msg"></label>
+    </div>
+    <div class="scorefour">
+        <table>
+            <tr>
+                <td><button id="p0_0" onclick='play(0,0)'></button></td>
+                <td><button id="p0_1" onclick='play(0,1)'></button></td>
+                <td><button id="p0_2" onclick='play(0,2)'></button></td>
+                <td><button id="p0_3" onclick='play(0,3)'></button></td>
+                <td><button id="p0_4" onclick='play(0,4)'></button></td>
+                <td><button id="p0_5" onclick='play(0,5)'></button></td>
+                <td><button id="p0_6" onclick='play(0,6)'></button></td>
+            </tr>
+            <tr>
+                <td><button id="p1_0" onclick='play(1,0)'></button></td>
+                <td><button id="p1_1" onclick='play(1,1)'></button></td>
+                <td><button id="p1_2" onclick='play(1,2)'></button></td>
+                <td><button id="p1_3" onclick='play(1,3)'></button></td>
+                <td><button id="p1_4" onclick='play(1,4)'></button></td>
+                <td><button id="p1_5" onclick='play(1,5)'></button></td>
+                <td><button id="p1_6" onclick='play(1,6)'></button></td>
+            </tr>
+            <tr>
+                <td><button id="p2_0" onclick='play(2,0)'></button></td>
+                <td><button id="p2_1" onclick='play(2,1)'></button></td>
+                <td><button id="p2_2" onclick='play(2,2)'></button></td>
+                <td><button id="p2_3" onclick='play(2,3)'></button></td>
+                <td><button id="p2_4" onclick='play(2,4)'></button></td>
+                <td><button id="p2_5" onclick='play(2,5)'></button></td>
+                <td><button id="p2_6" onclick='play(2,6)'></button></td>
+            </tr>
+            <tr>
+                <td><button id="p3_0" onclick='play(3,0)'></button></td>
+                <td><button id="p3_1" onclick='play(3,1)'></button></td>
+                <td><button id="p3_2" onclick='play(3,2)'></button></td>
+                <td><button id="p3_3" onclick='play(3,3)'></button></td>
+                <td><button id="p3_4" onclick='play(3,4)'></button></td>
+                <td><button id="p3_5" onclick='play(3,5)'></button></td>
+                <td><button id="p3_6" onclick='play(3,6)'></button></td>
+            </tr>
+            <tr>
+                <td><button id="p4_0" onclick='play(4,0)'></button></td>
+                <td><button id="p4_1" onclick='play(4,1)'></button></td>
+                <td><button id="p4_2" onclick='play(4,2)'></button></td>
+                <td><button id="p4_3" onclick='play(4,3)'></button></td>
+                <td><button id="p4_4" onclick='play(4,4)'></button></td>
+                <td><button id="p4_5" onclick='play(4,5)'></button></td>
+                <td><button id="p4_6" onclick='play(4,6)'></button></td>
+            </tr>
+            <tr>
+                <td><button id="p5_0" onclick='play(5,0)'></button></td>
+                <td><button id="p5_1" onclick='play(5,1)'></button></td>
+                <td><button id="p5_2" onclick='play(5,2)'></button></td>
+                <td><button id="p5_3" onclick='play(5,3)'></button></td>
+                <td><button id="p5_4" onclick='play(5,4)'></button></td>
+                <td><button id="p5_5" onclick='play(5,5)'></button></td>
+                <td><button id="p5_6" onclick='play(5,6)'></button></td>
+            </tr>
+    
+        </table>     
+    </div>
+    <div class="error-text"></div>
+    <div class="new-game-round"> 
+        <div>
+            <button onclick="newGame()"> <label>New Game</label></button>
+        </div>
+        <div>
+            <button onclick="newRound()"> <label>New Round</label> </button>
+        </div>
+    </div>
+    <div class="info-box">
+
+    </div>
+    <div id="piechart"></div>
+</div>
+<div></div>
+<script src="js/scorefourPc.js"></script>
+</body>
+
+</html>
